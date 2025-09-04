@@ -1,3 +1,5 @@
+```mermaid
+
 %%2025년도 2학기 C++ 프로그래밍 수업 원격 리포지토리
 
 classDiagram
@@ -29,3 +31,5 @@ classDiagram
     Invoice *-- Company : composition
     
     Invoice ..> Product : uses
+
+```
