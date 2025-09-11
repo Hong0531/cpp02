@@ -6,7 +6,7 @@ class Pokemon
 {
 public:
 	Pokemon() { cout << "Default(Pokemon) constructor\n"; }
-	~Pokemon() { cout << "Base class (Pokemon) destructor\n"; }
+	virtual ~Pokemon() { cout << "Base class (Pokemon) destructor\n"; }  // prevent memory leak
 	virtual void attack() const { cout << "Attack!" << endl; }
 };
 
@@ -14,7 +14,7 @@ class Pikachu : public Pokemon  // is-a
 {
 public:
 	Pikachu() { cout << "Default(Pikachu) constructor\n"; }
-	~Pikachu() { cout << "Derived class (Pikachu) destructor"; }
+	~Pikachu() { cout << "Derived class (Pikachu) destructor\n"; }
 	void attack() const { cout << "Electric Attack~" << endl; }
 };
 int main()
@@ -28,3 +28,4 @@ int main()
 	pokemon->attack();
 	delete pokemon;
 	return 0;
+}
