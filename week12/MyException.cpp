@@ -1,24 +1,26 @@
 #include "MyException.h"
-#include <iostream>
-using namespace std;
 
 MyException::MyException(int ec, const char* em, DynamicArray* ea)
-    : errorCode(ec), errorMessage(em), errorAddress(ea)
+	: errorCode(ec), errorMessage(em), errorAddress(ea)
 {
-    // cout << "抗寇 按眉 积己\n";
+	//cout << "抗寇 按眉 积己\n";
+}
+
+MyException::~MyException()
+{
 }
 
 int MyException::getErrorCode() const
 {
-    return errorCode;
+	return errorCode;
 }
 
 const char* MyException::getErrorMessage() const
 {
-    return errorMessage;
+	return errorMessage;
 }
 
 DynamicArray* MyException::getErrorAddress() const
 {
-    return errorAddress;
+	return errorAddress;
 }
