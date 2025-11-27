@@ -1,65 +1,65 @@
-#include "stack.cpp"
-
-class Pokemon {
-private:
-	int hp;
-	string name;
-public:
-	Pokemon() : hp(1), name("¹«¸í") {
-
-	}
-	Pokemon(int hp, string name) : hp(hp), name(name) {
-		cout << name << " Æ÷ÄÏ¸ó »ý¼ºµÊ\n";
-	}
-	int getHp() const {
-		return hp;
-	}
-	string getName() const {
-		return name;
-	}
-};
-//class Pikachu : public Pokemon {
+ï»¿//#include "stack.cpp"
+//
+//class Pokemon {
+//private:
+//	int hp;
+//	string name;
 //public:
-//	Pikachu() {};
-//	void attack() { "Àü±â°ø°Ý!\n"; };
+//	Pokemon() : hp(1), name("ë¬´ëª…") {
+//
+//	}
+//	Pokemon(int hp, string name) : hp(hp), name(name) {
+//		cout << name << " í¬ì¼“ëª¬ ìƒì„±ë¨\n";
+//	}
+//	int getHp() const {
+//		return hp;
+//	}
+//	string getName() const {
+//		return name;
+//	}
 //};
-//class Squirtle : public Pokemon {
-//public:
-//	Squirtle() {};
-//	void attack() { "¹°´ëÆ÷°ø°Ý!\n"; };
-//};
-
-ostream& operator<<(ostream& o, Pokemon& right) {
-	o << right.getName() << "(hp: " << right.getHp() << ")\n";
-	return o;
-}
-
-int main()
-{
-	typedef Stack<Pokemon> PokemonStack;
-	typedef Stack<int> iStack;
-
-	Pokemon pikachu;
-	Pokemon squirtle(100, "²¿ºÎ±â");
-
-	iStack stacki(10);
-	PokemonStack stackp(3);
-	Stack<double> stackd(3);
-	stackp.push(pikachu);
-	stackp.push(squirtle);
-
-	stacki.push(5);
-	stacki.push(6);
-	stacki.push(7);
-	stacki.push(3);
-	cout << stacki.pop() << endl;
-	cout << stacki.pop() << endl;
-	//cout << stackd.pop() << endl;  // stack is empty!
-	stackp.pop();
-	stackp.pop();
-	//stackp.pop();
-
-	cout << pikachu;
-	cout << squirtle;
-	return 0;
-}
+////class Pikachu : public Pokemon {
+////public:
+////	Pikachu() {};
+////	void attack() { "ì „ê¸°ê³µê²©!\n"; };
+////};
+////class Squirtle : public Pokemon {
+////public:
+////	Squirtle() {};
+////	void attack() { "ë¬¼ëŒ€í¬ê³µê²©!\n"; };
+////};
+//
+//ostream& operator<<(ostream& o, Pokemon& right) {
+//	o << right.getName() << "(hp: " << right.getHp() << ")\n";
+//	return o;
+//}
+//
+//int main()
+//{
+//	typedef Stack<Pokemon> PokemonStack;
+//	typedef Stack<int> iStack;
+//
+//	Pokemon pikachu;
+//	Pokemon squirtle(100, "ê¼¬ë¶€ê¸°");
+//
+//	iStack stacki(10);
+//	PokemonStack stackp(3);
+//  Stack<double> stackd(3);
+//  stackp.push(pikachu);
+//  stackp.push(squirtle);
+//
+//  stacki.push(5);
+//  stacki.push(6);
+//  stacki.push(7);
+//  stacki.push(3);
+//  cout << stacki.pop() << endl;
+//  cout << stacki.pop() << endl;
+//  //cout << stackd.pop() << endl;  // stack is empty!
+//  stackp.pop();
+//  stackp.pop();
+//  //stackp.pop();
+//
+//  cout << pikachu;
+//  cout << squirtle;
+//  return 0;
+//}
